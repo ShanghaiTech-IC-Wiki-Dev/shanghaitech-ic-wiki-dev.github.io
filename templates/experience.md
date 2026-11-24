@@ -1,6 +1,6 @@
 # 经验主题与年份
 
-<!-- 竞赛复盘放在 docs/competitions/，升学、实习和就业经验放在 docs/career/ 下，或补充到对应页面的“征集”小节。保留适合经历的提示，替换后再投稿。 -->
+<!-- 竞赛复盘放在 docs/competitions/experiences/，升学经验放在 docs/career/graduate-study/ 或 docs/career/study-abroad/，实习和就业经验放在 docs/career/internship/ 或 docs/career/employment/，也可补充到对应页面的“征集”小节。保留适合经历的提示，替换后再投稿。 -->
 
 ## 背景与范围
 

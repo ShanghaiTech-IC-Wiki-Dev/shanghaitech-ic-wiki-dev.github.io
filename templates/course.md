@@ -1,6 +1,6 @@
 # 课程名称
 
-<!-- 复制到 docs/courses/，文件名用小写课程号（如 ee113.md），并在 docs/.vitepress/data/courses.ts 对应课程上填写 page 字段。课程正式名称、课程号、开课情况与要求均须以可公开核实的资料为依据。 -->
+<!-- 复制到 docs/shanghaitech/courses/，文件名用小写课程号（如 ee113.md），并在 docs/.vitepress/data/courses.ts 对应课程上填写 page 字段。课程正式名称、课程号、开课情况与要求均须以可公开核实的资料为依据。 -->
 
 ## 课程信息
 

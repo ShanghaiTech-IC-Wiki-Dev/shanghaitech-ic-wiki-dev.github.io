@@ -55,7 +55,7 @@ flowchart LR
   class K,B,U,L,N,Z,R,X app
 ```
 
-完整方向与交叉关系见 [科研方向](/research/)，按方向查老师见 [教授与课题组](/shanghaitech/faculty)。
+完整方向与交叉关系见 [科研方向](/explore-ic/research-directions/)，按方向查老师见 [教授与课题组](/shanghaitech/faculty/)。
 
 ## EE 本科：143 学分如何连接 IC
 
@@ -75,12 +75,12 @@ flowchart LR
 
 ### 面向 IC 的选课思路
 
-- **数字电路与芯片实现**：从 [EE115B 数字电路](/courses/ee115b) 到 [EE113 数字集成电路 I](/courses/ee113)，再接 [EE291F 数字 VLSI 设计流程](/courses/ee291f)。
-- **模拟与混合信号**：先打好电路基础、[EE115A 模拟电路](/courses/ee115a) 和 [信号与系统](/courses/ee150)，再进入模拟集成电路与相关实验。
+- **数字电路与芯片实现**：从 [EE115B 数字电路](/shanghaitech/courses/ee115b) 到 [EE113 数字集成电路 I](/shanghaitech/courses/ee113)，再接 [EE291F 数字 VLSI 设计流程](/shanghaitech/courses/ee291f)。
+- **模拟与混合信号**：先打好电路基础、[EE115A 模拟电路](/shanghaitech/courses/ee115a) 和 [信号与系统](/shanghaitech/courses/ee150)，再进入模拟集成电路与相关实验。
 - **器件、光电与 MEMS**：在物理、电磁学、半导体器件基础之上，按研究问题选择工艺、光电与平台实验课程。
-- **架构、AI 芯片与 EDA**：结合 [CS110](/courses/cs110)、[EE219](/courses/ee219) 及算法、数学课程，不把写 RTL 与理解系统割裂。
+- **架构、AI 芯片与 EDA**：结合 [CS110](/shanghaitech/courses/cs110)、[EE219](/shanghaitech/courses/ee219) 及算法、数学课程，不把写 RTL 与理解系统割裂。
 
-这些是学习建议，不是新增毕业要求。具体课程、先修与开课学期请看 [课程地图](/courses/)。
+这些是学习建议，不是新增毕业要求。具体课程、先修与开课学期请看 [课程地图](/shanghaitech/courses/)。
 
 ## 本研一体：按先修能力，而不只按年级选课
 
@@ -88,16 +88,16 @@ flowchart LR
 
 **研究生课程向本科生开放，不等于所有课程都无条件可选，也不等于自动获得研究生录取资格。** 学分如何计入本科学位、是否需要教师许可，应向教务和任课教师核实。尤其不要仅凭课程代码判断难度，或为提前修课跳过必要实验训练。
 
-## 下一步去哪里
+## 校内资源
 
 | 你正在找什么 | 推荐入口 |
 | --- | --- |
-| 老师、方向与公开主页 | [教授与课题组](/shanghaitech/faculty) |
-| 一份完整的课题组介绍示例 | [VSPLab](/shanghaitech/vsplab) |
-| 微纳加工、EDA 与测试资源 | [科研与工艺平台](/shanghaitech/platforms) |
+| 课程公开信息、先修要求与有学期标记的修读经验 | [课程](/shanghaitech/courses/) |
+| 老师、方向与公开主页 | [教师](/shanghaitech/faculty/) |
+| 课题组介绍与微纳加工、EDA、测试资源 | [课题组与科研平台](/shanghaitech/research-groups/)，示例：[VSPLab](/shanghaitech/research-groups/vsplab) |
+| IC 荣誉项目的公开通知与介绍 | [IC 荣誉项目](/shanghaitech/honors-program/) |
 | 实训、联培与特色项目 | [特色培养项目](/shanghaitech/programs) |
-| 各方向解决什么问题 | [科研方向](/research/) |
-| 课程先后顺序与课程介绍 | [课程地图](/courses/) |
+| 各方向解决什么问题 | [科研方向](/explore-ic/research-directions/) |
 
 ## 参考与来源
 
@@ -107,5 +107,5 @@ flowchart LR
 - [信息学院本科生招生介绍](https://sist.shanghaitech.edu.cn/2711/list.htm)：专业设置、培养特色与本硕博一体化体系。
 - [2026 级电子信息工程培养方案](https://faculty.sist.shanghaitech.edu.cn/office/Academics/Undergraduate/Degree%20Programmes/2026%20Bachelor%20Degree%20Prorgams%20in%20EE.htm)：学分及三选二规则；本文依据其本地摘录 `ee2026_rows.txt` 整理。
 - [本硕博课程体系与年度开课计划](https://sist.shanghaitech.edu.cn/2835/list.htm)、[2026–2027 学年开课表](https://faculty.sist.shanghaitech.edu.cn/office/Academics/Courses/SIST_2026-2027_Courses.htm)：先修与课程层次，以教务系统为准。
-- 课题组示意使用本站 `faculty.ts`、`directions.ts` 的 2026-11 资料版本；具体主页见 [教授与课题组](/shanghaitech/faculty)。
+- 课题组示意使用本站 `faculty.ts`、`directions.ts` 的 2026-11 资料版本；具体主页见 [教授与课题组](/shanghaitech/faculty/)。
 - [本科生 EE 专业选修课分类图](https://faculty.sist.shanghaitech.edu.cn/office/Academics/Undergraduate/Course%20schedule/EE_sample_core_electives.htm)：本科选课指导中包含半导体器件物理、导波光学等高阶课程，并要求关注先修、教学大纲与学分归类；课程层次参照当年开课表。

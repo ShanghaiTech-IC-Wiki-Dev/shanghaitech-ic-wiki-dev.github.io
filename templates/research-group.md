@@ -1,6 +1,6 @@
 # 课题组公开名称
 
-<!-- 复制到 docs/shanghaitech/（可参考 vsplab.md），教师姓名、职称、方向与主页等基本信息改在 docs/.vitepress/data/faculty.ts。先核对课题组主页、学院教师页或校方发布资料。无公开依据的部分保留“待共建”。 -->
+<!-- 复制到 docs/shanghaitech/research-groups/（可参考 vsplab.md），教师姓名、职称、方向与主页等基本信息改在 docs/.vitepress/data/faculty.ts。先核对课题组主页、学院教师页或校方发布资料。无公开依据的部分保留“待共建”。 -->
 
 ## 基本信息
 

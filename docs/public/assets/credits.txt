@@ -1,0 +1,6 @@
+mos-6502.webp
+作品：MOS 6502 die.jpg
+作者：Pauli Rautakorpi
+来源：https://commons.wikimedia.org/wiki/File:MOS_6502_die.jpg
+许可：CC BY 3.0 — https://creativecommons.org/licenses/by/3.0/
+处理：裁切、缩放、转码为 WebP。

@@ -31,7 +31,7 @@ const list = computed(() => {
           :key="d"
           class="chip"
           :class="'chip--' + directionById[d]?.cluster"
-          :href="withBase(directionById[d]?.link ?? '/research/')"
+          :href="withBase(directionById[d]?.link ?? '/explore-ic/research-directions/')"
         >{{ directionById[d]?.short ?? d }}</a>
       </div>
       <footer>

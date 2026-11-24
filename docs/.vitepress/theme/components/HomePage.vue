@@ -13,14 +13,14 @@ const stats = [
 ]
 
 const entries = [
-  { no: '01', title: '学习地图', desc: '上科大课程承接网络与四条进阶路线：数字、模拟、器件、EDA。', link: '/map/' },
-  { no: '02', title: '上科大课程', desc: '2026-27 官方开课表 + 学长学姐的课程经验与踩坑记录。', link: '/courses/' },
-  { no: '03', title: '教授与课题组', desc: '后摩尔中心、智慧电气、系统与安全中心的 IC 相关课题组。', link: '/shanghaitech/faculty' },
-  { no: '04', title: '科研方向', desc: '11 个细分方向：做什么、谁在做、要先学什么。', link: '/research/' },
-  { no: '05', title: '科普基础篇', desc: '产业链、设计流程、器件工艺、前沿技术与术语表。', link: '/basics/' },
-  { no: '06', title: '自学资源 · EDA', desc: '全球公开课、经典教材、商用与开源 EDA 工具链。', link: '/self-learning/' },
-  { no: '07', title: '科研探索', desc: '进组、读论文、会议地图、科研工具与学术写作。', link: '/research-guide/' },
-  { no: '08', title: '升学 · 就业 · 竞赛', desc: '保研、出国、考研、实习求职，以及集创赛与一生一芯。', link: '/career/' }
+  { no: '01', title: '认识 IC', desc: '从产业链与知识地图入手，了解集成电路有哪些研究方向。', link: '/explore-ic/' },
+  { no: '02', title: '学习地图', desc: '从基础知识出发，按工艺与器件、电路、系统架构、算法与编程和 EDA 查找学习路线。', link: '/learning/' },
+  { no: '03', title: '上科大 IC', desc: '查阅校内课程、教师、课题组与 IC 荣誉项目的公开资料入口。', link: '/shanghaitech/' },
+  { no: '04', title: '科研探索', desc: '从一个具体问题开始，学习查找论文、阅读文献与记录研究过程。', link: '/research/' },
+  { no: '05', title: '竞赛与项目', desc: '查找赛事指南、工程项目与参赛者的实践复盘。', link: '/competitions/' },
+  { no: '06', title: '升学与职业', desc: '按国内升学、国外升学、实习与就业查找经验和准备材料。', link: '/career/' },
+  { no: '07', title: '工具与资源', desc: '查找 EDA（电子设计自动化）工具、开发环境与开源项目。', link: '/tools/' },
+  { no: '08', title: '社区与共建', desc: '认领待共建条目，推荐一项资源，或提交你的第一篇文章。', link: '/community/' }
 ]
 
 const features = [
@@ -34,13 +34,13 @@ const features = [
     tag: '课程体系',
     title: '本研一体，研究生课向本科开放',
     desc: '数字集成电路 II、集成电路设计自动化、可重构计算、可测性设计、自旋电子学……本科阶段就能修到研究生级别的芯片课程。',
-    link: '/courses/'
+    link: '/shanghaitech/courses/'
   },
   {
     tag: '工程实训',
     title: 'Cadence 集成电路暑期实训',
     desc: '学院与楷登电子合作，Genus / Innovus / Tempus / Pegasus / Voltus 全家桶，用 RISC-V 项目走通 RTL-to-GDS。',
-    link: '/courses/cadence-summer'
+    link: '/shanghaitech/courses/cadence-summer'
   },
   {
     tag: '产教融合',
@@ -52,21 +52,21 @@ const features = [
     tag: '科研平台',
     title: '微纳加工、芯片测试与流片',
     desc: '校级量子器件中心 / 材料器件中心洁净室、EDA 计算集群，以及课题组与创芯学院提供的流片机会。',
-    link: '/shanghaitech/platforms'
+    link: '/shanghaitech/research-groups/'
   },
   {
     tag: '前沿交叉',
     title: '3D 渲染芯片、光计算、存算与 AI4EDA',
     desc: '三维重建与渲染芯片、随机计算、自旋类脑、光子智能芯片、AI 赋能计算光刻……小而尖的交叉方向。',
-    link: '/research/'
+    link: '/explore-ic/research-directions/'
   }
 ]
 
 const tracks = [
-  { title: '数字 IC 与体系结构', link: '/map/digital', chain: ['SI100B', 'EE115B', 'CS110', 'EE113', 'EE291F', 'EE213', 'EE219'], c: 'circuit' },
-  { title: '模拟 / 射频 / 电源', link: '/map/analog', chain: ['EE111', 'EE115A', 'EE112', 'EE212', 'EE130', 'EE230', 'EE171'], c: 'system' },
-  { title: '器件、工艺与光电', link: '/map/device', chain: ['EE120', 'EE220', 'EE224A', 'EE2211', 'EE237', 'EE222'], c: 'device' },
-  { title: 'EDA 与设计方法学', link: '/map/eda', chain: ['CS100', 'SI231B', 'SI251', 'EE215A', 'SI365'], c: 'eda' }
+  { title: '数字 IC 与体系结构', link: '/learning/digital-ic/', chain: ['SI100B', 'EE115B', 'CS110', 'EE113', 'EE291F', 'EE213', 'EE219'], c: 'circuit' },
+  { title: '模拟 / 射频 / 电源', link: '/learning/analog-ic/', chain: ['EE111', 'EE115A', 'EE112', 'EE212', 'EE130', 'EE230', 'EE171'], c: 'system' },
+  { title: '器件、工艺与光电', link: '/learning/devices-and-process/', chain: ['EE120', 'EE220', 'EE224A', 'EE2211', 'EE237', 'EE222'], c: 'device' },
+  { title: 'EDA 与设计方法学', link: '/learning/eda/', chain: ['CS100', 'SI231B', 'SI251', 'EE215A', 'SI365'], c: 'eda' }
 ]
 
 const friends = [
@@ -85,9 +85,9 @@ const friends = [
       <div class="hero-bg" aria-hidden="true" />
       <div class="hero-inner">
         <div class="hero-text">
+          <p class="eyebrow">ShanghaiTech IC Wiki</p>
           <h1>
-            <span class="hero-name-en" lang="en">ShanghaiTech <span class="name-suffix">IC Wiki</span></span>
-            <span lang="zh-CN">上科大<span class="grad">芯知库</span></span>
+            上科大<span class="grad">芯知库</span>
           </h1>
           <p class="lead">
             从电路基础到流片签核——上海科技大学学生发起的集成电路学习、科研与升学指南。
@@ -95,62 +95,24 @@ const friends = [
             把散落在课程群、组会和学长学姐口中的经验，连成一张看得见的地图。
           </p>
           <div class="actions">
-            <a class="btn btn--primary" :href="withBase('/map/')">开始探索 →</a>
-            <a class="btn btn--ghost" :href="withBase('/shanghaitech/faculty')">教授与课题组</a>
-            <a class="btn btn--ghost" :href="withBase('/research/')">科研方向拓扑</a>
+            <a class="btn btn--primary" :href="withBase('/learning/')">开始探索 →</a>
+            <a class="btn btn--ghost" :href="withBase('/shanghaitech/faculty/')">教授与课题组</a>
+            <a class="btn btn--ghost" :href="withBase('/explore-ic/research-directions/')">科研方向拓扑</a>
           </div>
         </div>
-        <div class="hero-art" aria-hidden="true">
-          <svg viewBox="0 0 360 360">
-            <defs>
-              <linearGradient id="die" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#0f5b6d" />
-                <stop offset="1" stop-color="#0a3b48" />
-              </linearGradient>
-              <linearGradient id="trace" x1="0" y1="0" x2="1" y2="0">
-                <stop offset="0" stop-color="#24e1e5" />
-                <stop offset="1" stop-color="#ec725e" />
-              </linearGradient>
-              <filter id="glow"><feGaussianBlur stdDeviation="3" /></filter>
-            </defs>
-            <!-- pins -->
-            <g class="pins">
-              <rect v-for="i in 9" :key="'t' + i" :x="62 + i * 22" y="30" width="8" height="26" rx="2" />
-              <rect v-for="i in 9" :key="'b' + i" :x="62 + i * 22" y="304" width="8" height="26" rx="2" />
-              <rect v-for="i in 9" :key="'l' + i" x="30" :y="62 + i * 22" width="26" height="8" rx="2" />
-              <rect v-for="i in 9" :key="'r' + i" x="304" :y="62 + i * 22" width="26" height="8" rx="2" />
-            </g>
-            <rect x="56" y="56" width="248" height="248" rx="18" fill="url(#die)" stroke="rgba(36,225,229,.45)" />
-            <rect x="70" y="70" width="220" height="220" rx="10" fill="none" stroke="rgba(255,255,255,.08)" />
-            <!-- blocks -->
-            <g class="blocks">
-              <rect x="84" y="84" width="92" height="70" rx="6" />
-              <text x="130" y="124">RISC-V</text>
-              <rect x="186" y="84" width="90" height="70" rx="6" />
-              <text x="231" y="124">NPU</text>
-              <rect x="84" y="164" width="60" height="112" rx="6" />
-              <text x="114" y="224">SRAM</text>
-              <rect x="154" y="164" width="122" height="52" rx="6" />
-              <text x="215" y="194">3D Render</text>
-              <rect x="154" y="226" width="58" height="50" rx="6" />
-              <text x="183" y="255">PLL</text>
-              <rect x="218" y="226" width="58" height="50" rx="6" />
-              <text x="247" y="255">SerDes</text>
-            </g>
-            <!-- traces -->
-            <g class="traces" fill="none" stroke="url(#trace)" stroke-width="2" stroke-linecap="round">
-              <path d="M176 119 H186" />
-              <path d="M130 154 V164" />
-              <path d="M231 154 V164" />
-              <path d="M144 220 H154" />
-              <path class="flow" d="M18 180 H56 M304 120 H342 M180 304 V342 M120 18 V56" />
-            </g>
-            <g filter="url(#glow)" opacity=".7" fill="none" stroke="#24e1e5" stroke-width="2">
-              <path class="flow" d="M176 119 H186 M130 154 V164 M231 154 V164 M144 220 H154" />
-            </g>
-            <text x="180" y="292" class="die-label">SHANGHAITECH · IC</text>
-          </svg>
-        </div>
+        <figure class="hero-art">
+          <img
+            :src="withBase('/assets/mos-6502.webp')"
+            alt="MOS 6502 微处理器裸片显微照片，可见金属互连和排列紧密的电路"
+            width="880"
+            height="560"
+          />
+          <figcaption>
+            MOS 6502 裸片 · Pauli Rautakorpi ·
+            <a href="https://commons.wikimedia.org/wiki/File:MOS_6502_die.jpg" target="_blank" rel="noopener">CC BY 3.0</a>
+            （已裁剪、缩放并转码）
+          </figcaption>
+        </figure>
       </div>
       <div class="stats">
         <div v-for="s in stats" :key="s.label" class="stat">
@@ -206,8 +168,8 @@ const friends = [
     <section class="block block--tint">
       <header class="block-head">
         <p class="kicker">Learning Tracks</p>
-        <h2>四条学习路线</h2>
-        <p class="sub">按上科大课程代码排列的推荐修读顺序，点击查看每门课为什么要学、校外还能补什么。</p>
+        <h2>按课程代码看学习路线</h2>
+        <p class="sub">工艺与器件、电路（数字与模拟）和 EDA 方向的上科大推荐修读顺序；系统架构、算法与编程等方向见学习地图。点击查看每门课为什么要学、校外还能补什么。</p>
       </header>
       <div class="tracks">
         <a v-for="t in tracks" :key="t.title" :class="['track', 'c-' + t.c]" :href="withBase(t.link)">
@@ -230,14 +192,14 @@ const friends = [
           <p>修过的课、进过的组、踩过的坑、拿到的 offer——每一份经验都能让下一届少走弯路。</p>
         </div>
         <div class="cta-actions">
-          <a class="btn btn--accent" :href="withBase('/about/contribute')">参与共建</a>
+          <a class="btn btn--accent" :href="withBase('/community/contributing')">参与共建</a>
           <a class="btn btn--ghost" href="https://github.com/ShanghaiTech-IC-Wiki-Dev/shanghaitech-ic-wiki-dev.github.io" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </div>
       <div class="friends">
         <span>友站</span>
         <a v-for="f in friends" :key="f.name" :href="f.url" target="_blank" rel="noopener">{{ f.name }}</a>
-        <a :href="withBase('/links/')">更多 →</a>
+        <a :href="withBase('/tools/links')">更多 →</a>
       </div>
     </section>
   </div>
@@ -276,23 +238,21 @@ const friends = [
   gap: 40px;
   align-items: center;
 }
+.eyebrow {
+  margin: 0 0 14px;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  line-height: 1.25;
+  letter-spacing: 0.015em;
+  color: #8fe3ec;
+  font-weight: 600;
+}
 .hero h1 {
-  display: grid;
-  gap: 0.16em;
   margin: 0;
   font-size: clamp(40px, 6vw, 64px);
   line-height: 1.08;
   font-weight: 800;
   letter-spacing: -0.02em;
   color: #fff;
-}
-.hero-name-en {
-  font-size: 0.9em;
-  font-weight: 750;
-  color: #c2f4f7;
-}
-.hero-name-en .name-suffix {
-  white-space: nowrap;
 }
 .hero h1 .grad {
   background: linear-gradient(120deg, #5ff0f2 0%, #9ad7ff 45%, #ff9a8b 100%);
@@ -343,48 +303,29 @@ const friends = [
   background: linear-gradient(135deg, #ec725e, #b33255);
   color: #fff;
 }
-.hero-art svg {
-  width: 100%;
-  max-width: 380px;
+.hero-art {
+  margin: 0;
+}
+.hero-art img {
   display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
   margin: 0 auto;
-  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.35));
+  border-radius: 14px;
+  border: 1px solid rgba(143, 227, 236, 0.28);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.55);
 }
-.pins rect {
-  fill: #8fb8c2;
-  opacity: 0.55;
+.hero-art figcaption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(233, 246, 248, 0.6);
 }
-.blocks rect {
-  fill: rgba(255, 255, 255, 0.06);
-  stroke: rgba(143, 227, 236, 0.45);
-}
-.blocks text {
-  fill: #bdecf2;
-  font-size: 11px;
-  font-weight: 600;
-  text-anchor: middle;
-  font-family: var(--vp-font-family-mono);
-}
-.die-label {
-  fill: rgba(189, 236, 242, 0.55);
-  font-size: 9px;
-  letter-spacing: 0.25em;
-  text-anchor: middle;
-  font-family: var(--vp-font-family-mono);
-}
-.flow {
-  stroke-dasharray: 6 8;
-  animation: flow 2.4s linear infinite;
-}
-@keyframes flow {
-  to {
-    stroke-dashoffset: -28;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .flow {
-    animation: none;
-  }
+.hero-art figcaption a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 .stats {
   position: relative;
@@ -644,8 +585,8 @@ const friends = [
   .hero-inner {
     grid-template-columns: 1fr;
   }
-  .hero-art {
-    display: none;
+  .hero-art img {
+    max-width: 560px;
   }
   .entries {
     grid-template-columns: repeat(2, 1fr);
@@ -666,9 +607,6 @@ const friends = [
   }
 }
 @media (max-width: 640px) {
-  .hero h1 {
-    font-size: clamp(32px, 9.6vw, 40px);
-  }
   .hero {
     padding-top: 48px;
   }

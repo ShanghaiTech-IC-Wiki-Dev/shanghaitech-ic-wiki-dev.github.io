@@ -1,0 +1,62 @@
+---
+title: 前沿技术速览
+description: 用问题、代价与学习入口理解 Chiplet、HBM、存算一体、硅光和 AI 芯片等技术。
+---
+# 前沿技术速览
+
+前沿名词不是互相替代的路线：有的解决计算问题，有的解决互连、制造或能源问题。阅读新闻时，先问“解决哪个瓶颈、比较基线是什么、代价在哪里、证据到哪一层”。下面的“上科大相关方向”是本站学术导航，**不表示学校已经具备每项技术的完整平台或量产成果**。
+
+## Chiplet 与先进封装
+
+芯粒（Chiplet）把系统拆成多个裸片，通过封装内互连组成整体。先进封装涵盖高密度互连、中介层、堆叠等技术，可让不同工艺制造的计算、接口和存储模块协同。优势不只是“拼起来更大”，还包括工艺选择与复用；代价是接口功耗、跨裸片延迟、散热、测试和整体良率。单颗裸片性能不能直接代表封装系统性能。上科大相关方向：[数字 VLSI](/explore-ic/research-directions/digital-vlsi)、[体系结构](/explore-ic/research-directions/architecture)、[EDA](/explore-ic/research-directions/eda)。
+
+## HBM：带宽来自系统协同
+
+高带宽存储器（High Bandwidth Memory，HBM）通过存储裸片堆叠及宽接口提高带宽，常与计算芯片在先进封装中协同。它不等于“容量特别大的缓存”，也不会自动消除数据搬运成本：控制器、访存模式、封装布线与散热都会影响可用带宽。分析 AI 加速器时，应区分峰值带宽和真实工作负载利用率。上科大相关方向：[体系结构](/explore-ic/research-directions/architecture)、[AI 硬件](/explore-ic/research-directions/ai-hardware)。
+
+## 存算一体：少搬数据能省多少
+
+存内计算（Compute-in-Memory，CIM）尝试在存储阵列内或附近执行计算，以减少数据搬运。实现可以是数字或模拟，使用 SRAM、阻变存储或其他器件。关键问题是精度、数据转换开销、阵列外围、写入耐久性与可编程性；只报告阵列核心的能效，不能代表整个系统。上科大相关方向：[AI 硬件](/explore-ic/research-directions/ai-hardware)、[模拟与混合信号](/explore-ic/research-directions/analog-mixed)、[新型器件](/explore-ic/research-directions/devices)。
+
+## 硅光与 CPO：把光带到芯片旁
+
+硅光子学（Silicon Photonics）利用与硅工艺兼容的平台实现调制、传输和探测等光学功能；光电共封装（Co-Packaged Optics，CPO）则关注光学引擎与电子芯片的近距离集成。目标是应对高速通信中的电互连损耗和能耗，但激光源、耦合、热稳定性、封装与可维护性仍是系统难题。光互连也不意味着所有计算都变成光计算。上科大相关方向：[光电子与光子芯片](/explore-ic/research-directions/photonics)、[射频与电磁](/explore-ic/research-directions/rf-em)。
+
+## GaN 与 SiC：功率器件的另一套尺度
+
+氮化镓（Gallium Nitride，GaN）与碳化硅（Silicon Carbide，SiC）是宽禁带半导体，可用于高电压、高效率或高频功率转换等场景。两者的材料、器件结构和适用条件不同，不能仅凭材料名称决定哪个更优；驱动、封装寄生、散热和可靠性同样重要。它们也不是用来直接替代通用 CPU 中全部硅晶体管的材料。上科大相关方向：[器件](/explore-ic/research-directions/devices)、[电源与电力电子](/explore-ic/research-directions/power)、[射频](/explore-ic/research-directions/rf-em)。
+
+## 自旋电子与 MRAM
+
+自旋电子学（Spintronics）利用电子自旋及磁性相关效应处理和存储信息。磁性随机存储器（Magnetoresistive Random-Access Memory，MRAM）利用磁性状态存储数据，具有非易失等特点；写入电流、保持时间、耐久性、工艺集成和读写错误率需要权衡。器件能翻转磁态，只是通往可用存储阵列的一步。上科大相关方向：[器件与自旋电子](/explore-ic/research-directions/devices)、[AI 硬件](/explore-ic/research-directions/ai-hardware)。
+
+## RISC-V：开放指令集不是免费芯片
+
+RISC-V 是开放的指令集架构（Instruction Set Architecture，ISA），定义软件与处理器之间的接口。不同实现可以是简单顺序核，也可以是复杂乱序核；开放 ISA 不代表实现、验证、物理设计或制造没有成本。做处理器项目时，应同时考虑异常、中断、软件工具链与测试，而不只统计支持多少条指令。上科大相关方向：[体系结构](/explore-ic/research-directions/architecture)、[数字 VLSI](/explore-ic/research-directions/digital-vlsi)、[硬件安全](/explore-ic/research-directions/hardware-security)；实践入口：[一生一芯](/competitions/projects/ysyx)。
+
+## AI 芯片：从算子到整个工作负载
+
+AI 加速器通过计算阵列、存储层次、数据流与数值格式协同，改善特定任务的性能和能效。训练与推理、大批量与低延迟服务，要求可能完全不同。峰值运算量不是端到端吞吐：访存、通信、稀疏性、编译映射和算子覆盖都会影响真实收益。比较时必须给出模型、精度、批量和测量边界。上科大相关方向：[AI 硬件](/explore-ic/research-directions/ai-hardware)、[体系结构](/explore-ic/research-directions/architecture)、[数字 VLSI](/explore-ic/research-directions/digital-vlsi)。
+
+## AI4EDA：让搜索更聪明，也要让结果可用
+
+人工智能辅助电子设计自动化（AI for EDA，AI4EDA）可用于预测、参数调优、设计空间探索或优化策略。它既可能使用学习模型，也常要结合经典优化和工程规则。预测误差低，不代表生成的设计一定可布线、可签核；还需检查跨设计泛化、训练数据泄漏、计算成本和与强基线的公平比较。上科大相关方向：[EDA 与设计方法学](/explore-ic/research-directions/eda)、[AI 硬件](/explore-ic/research-directions/ai-hardware)。
+
+## 类脑计算：从器件动力学到网络算法
+
+类脑计算（Neuromorphic Computing）探索受神经系统启发的信息表示与计算机制，脉冲神经网络只是其中一类方法。研究可以涉及新型器件、模拟电路、事件驱动数字芯片和学习算法。事件稀疏可能降低某些任务的开销，但编码、训练、精度与外围系统成本仍需计入；“像大脑”不是能效结论。上科大相关方向：[AI 硬件](/explore-ic/research-directions/ai-hardware)、[器件](/explore-ic/research-directions/devices)、[模拟与混合信号](/explore-ic/research-directions/analog-mixed)。
+
+## 量子：芯片之外还有控制与读出
+
+量子信息利用量子态完成信息处理，硬件可以采用不同物理路线。对电子工程学生，机会不只在量子比特本身，还包括微纳制造、低温电子学、微波控制、读出与系统集成。量子优势需要绑定具体任务和误差条件，不能理解成所有经典程序都能加速。上科大相关方向：[器件与量子相关研究](/explore-ic/research-directions/devices)、[量子光子学相关研究](/explore-ic/research-directions/photonics)、[射频与电磁](/explore-ic/research-directions/rf-em)。
+
+## 怎样开始读前沿
+
+先选一个能说清楚的瓶颈，再补基础。对每篇论文记录：输入与输出、工艺或平台、比较对象、关键指标、测量层级、尚未验证的部分。仿真、原型、流片、实测和量产是不同证据，不能互相替代。课程入口见 [学习地图](/learning/)，论文方法见 [科研入门](/research/)。
+
+## 参考与来源
+
+- [学院教师与科研入口](https://sist.shanghaitech.edu.cn/)：本站方向映射依据公开教师研究信息整理，详细来源见各科研方向页。
+- [RISC-V International](https://riscv.org/)：ISA 与生态入口。
+- [IEEE 国际器件与系统路线图](https://irds.ieee.org/)：技术趋势与系统约束。
+- [JEDEC](https://www.jedec.org/)：HBM 等存储标准入口。

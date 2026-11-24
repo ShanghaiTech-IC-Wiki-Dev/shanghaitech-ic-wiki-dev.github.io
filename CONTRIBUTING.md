@@ -14,31 +14,29 @@
 ## 从个人分支开始
 
 1. 在项目仓库右上角选择 **Fork → Create fork**，进入自己的仓库副本。
-2. 在自己的 Fork 选择 **Code → HTTPS**，复制地址并替换下例的 `FORK_URL`。从原项目仓库的 **Code → HTTPS** 复制地址，替换 `UPSTREAM_URL`。已有本地副本时，直接进入仓库目录。已有 `upstream` 时可跳过添加远端的命令。
+2. 在自己的 Fork 选择 **Code → HTTPS**，复制地址，将下例中的 `FORK_URL` 换成实际地址。在已有本地副本时直接进入仓库目录即可。
 
    ```bash
    git clone FORK_URL ic-wiki
    cd ic-wiki
-   git remote add upstream UPSTREAM_URL
-   git fetch upstream develop
-   git switch --no-track -c docs/add-reading-notes upstream/develop
+   git switch -c docs/add-reading-notes
    ```
 
-3. 每次开始新稿件前，运行 `git fetch upstream develop`，再从更新后的 `upstream/develop` 新建主题分支。直接克隆原项目的核心成员以 `origin/develop` 为起点。
+3. 以后开始新稿件前，在 GitHub 上打开 Fork 的 **Sync fork → Update branch**，再从本地更新过的 `main` 创建新分支。拥有本仓库写入权限的成员也可直接在仓库内创建开发分支。
 
 ## 修改或新增页面
 
 在 `docs/` 中找到所属板块的 Markdown 文件。修改已有页面时尽量保留原路径，让读者保存的链接继续有效。新增页面可从[内容模板](templates/)复制，写完后删除模板中的提示文字。教授、课程和研究方向的事实集中在 `docs/.vitepress/data/` 的 `faculty.ts`、`courses.ts`、`directions.ts` 中修改，页面通过组件引用，不要在正文里复制同一份表格。
 
-1. 文件与文件夹用小写英文命名，多个单词用连字符分隔，例如 `docs/research-guide/reading-notes.md`。frontmatter 写 `title` 与 `description`，正文使用一个一级标题，用二级标题组织正文。
-2. 首次出现的重要专业术语写为英文（中文）。为链接使用能说明目的地的文字，站内链接使用以 `/` 开头、不带 `.md` 的绝对路径，例如 `[论文阅读](/research-guide/paper-reading)`。
+1. 文件与文件夹用小写英文命名，多个单词用连字符分隔，例如 `docs/research/reading-notes.md`。frontmatter 写 `title` 与 `description`，正文使用一个一级标题，用二级标题组织正文。
+2. 首次出现的重要专业术语写为英文（中文）。为链接使用能说明目的地的文字，站内链接使用以 `/` 开头、不带 `.md` 的绝对路径，例如 `[论文阅读](/research/paper-reading)`。
 3. 在所属板块首页添加入口。打开 [docs/.vitepress/config.mts](docs/.vitepress/config.mts)，在 `sidebar` 中对应板块的 `items` 里按相邻条目的写法添加新页。
 
    ```ts
-   { text: '阅读笔记', link: '/research-guide/reading-notes' }
+   { text: '阅读笔记', link: '/research/reading-notes' }
    ```
 
-4. 发布代码、公式或流程图前，可对照[写作示例](docs/about/writing.md)检查排版。正文中的双花括号会被 Vue 当作模板解析，展示这类语法时请放进代码块。欢迎补充经验的小节使用 `::: info 征集` 容器，写明待补的具体问题。
+4. 发布代码、公式或流程图前，可对照[写作示例](docs/community/writing.md)检查排版。正文中的双花括号会被 Vue 当作模板解析，展示这类语法时请放进代码块。欢迎补充经验的小节使用 `::: info 征集` 容器，写明待补的具体问题。
 
 ## 引用、授权和审核标准
 
@@ -62,12 +60,12 @@ npm run dev
 
 ```bash
 git diff
-git add docs/research-guide/reading-notes.md docs/research-guide/index.md docs/.vitepress/config.mts
+git add docs/research/reading-notes.md docs/research/index.md docs/.vitepress/config.mts
 git diff --cached
 git commit -m "docs: 增加论文阅读笔记"
 git push -u origin docs/add-reading-notes
 ```
 
-在 GitHub 上选择 **Compare & pull request**，确认目标是项目仓库的 `develop`，来源是你的开发分支。填写 PR 模板，说明资料来源和检查结果。若使用网页编辑、尚未本地构建，可在模板中如实说明，并查看 **Checks** 中的 CI 结果。
+在 GitHub 上选择 **Compare & pull request**，确认目标是项目仓库的 `main`，来源是你的开发分支。填写 PR 模板，说明资料来源和检查结果。若使用网页编辑、尚未本地构建，可在模板中如实说明，并查看 **Checks** 中的 CI 结果。
 
-维护者核对内容、署名、链接和构建结果后合并。收到修改意见时，在同一分支补充提交即可更新 PR。内容先合并到 `develop`。准备发布时，维护者从本仓库的 `develop` 向 `main` 提交发布 PR，合并后再到正式网站复查。[维护说明](docs/about/maintenance.md)
+维护者核对内容、署名、链接和构建结果后合并。收到修改意见时，在同一分支补充提交即可更新 PR。合并会触发网站部署，随后可在正式网站复查页面。[维护说明](docs/community/maintenance.md)

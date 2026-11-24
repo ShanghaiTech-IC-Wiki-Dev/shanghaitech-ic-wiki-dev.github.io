@@ -2,8 +2,7 @@ name: Documentation CI
 
 on:
   pull_request:
-    branches: [develop, main]
-    types: [opened, synchronize, reopened, edited]
+    branches: [main]
 
 permissions:
   contents: read
@@ -13,19 +12,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  main-source:
-    if: github.base_ref == 'main'
-    runs-on: ubuntu-latest
-    steps:
-      - name: Require the repository's develop branch
-        env:
-          SAME_REPO: ${{ github.event.pull_request.head.repo.id == github.event.repository.id }}
-        run: |
-          if [ "$SAME_REPO" != "true" ] || [ "$GITHUB_HEAD_REF" != "develop" ]; then
-            echo "::error::请将功能分支的 PR 提交到 develop。只有本仓库的 develop 可以合入 main。"
-            exit 1
-          fi
-
   build:
     name: docs-build
     runs-on: ubuntu-latest

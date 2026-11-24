@@ -10,16 +10,14 @@
 
 | 板块 | 可以在这里找什么 |
 | --- | --- |
-| [科普基础](docs/basics/index.md) | 集成电路是什么、产业链、设计流程、器件与工艺、术语表 |
-| [学习地图](docs/map/index.md) | 上科大课程承接网络与数字、模拟、器件、EDA 四条路线 |
-| [上科大课程](docs/courses/index.md) | 2026-27 开课表、培养方案要求与核心课程详情 |
-| [上科大 IC 生态](docs/shanghaitech/index.md) | 教授与课题组、VSPLab、科研与工艺平台、培养项目 |
-| [科研方向](docs/research/index.md) | 11 个细分方向的问题、方法、本校研究力量与先修知识 |
-| [自学资源](docs/self-learning/index.md) · [EDA 工具](docs/eda/index.md) | 公开课程、教材、商用与开源工具链 |
-| [科研探索](docs/research-guide/index.md) | 进组、读论文、会议期刊、工具与写作 |
-| [竞赛与项目](docs/competitions/index.md) | 赛事对照、备赛闭环与一生一芯 |
-| [升学与就业](docs/career/index.md) | 推免、申请、考研、实习、岗位与企业 |
-| [社区与共建](docs/about/index.md) | 投稿入口、写作示例、贡献者署名与维护说明 |
+| [认识 IC](docs/explore-ic/index.md) | 集成电路是什么、设计流程知识地图、产业链、器件与工艺、前沿、术语表、11 个科研方向 |
+| [学习地图](docs/learning/index.md) | 上科大课程承接网络；工艺与器件、电路、系统架构、算法与编程、EDA 五个方向的路线与自学资源 |
+| [上科大 IC](docs/shanghaitech/index.md) | 课程、教师、课题组与科研平台、IC 荣誉项目、特色培养项目 |
+| [科研探索](docs/research/index.md) | 进组、读论文、会议期刊、工具与写作 |
+| [竞赛与项目](docs/competitions/index.md) | 赛事指南、参赛经验、工程项目与一生一芯 |
+| [升学与职业](docs/career/index.md) | 推免、考研、境外申请、实习、岗位与企业 |
+| [工具与资源](docs/tools/index.md) | EDA 工具全景、商用与开源工具链、开发环境、友链 |
+| [社区与共建](docs/community/index.md) | 投稿入口、写作示例、贡献者署名与维护说明 |
 
 标有“征集”的小节列出了欢迎补充的经验。你可以从补一条有出处的资源、修正一个失效链接开始。
 
@@ -39,8 +37,9 @@ npm run preview   # 预览构建产物
 ```
 docs/
 ├── index.md                 首页（HomePage 组件）
-├── basics/  map/  courses/  shanghaitech/  research/
-├── self-learning/  eda/  research-guide/  career/  competitions/  links/  about/
+├── explore-ic/  learning/  shanghaitech/  research/
+├── competitions/  career/  tools/  community/
+├── public/assets/           首页照片与第三方作品署名（credits.txt）
 └── .vitepress/
     ├── config.mts           导航栏、侧边栏与站点配置
     ├── data/                结构化数据（教授、课程、科研方向）
@@ -56,7 +55,7 @@ templates/                   新文章模板
 
 ## 构建与发布
 
-VitePress 读取 `docs/` 中的 Markdown 与 [站点配置](docs/.vitepress/config.mts) 生成静态页面；死链和模板错误会让构建失败。从 `develop` 创建功能分支，完成后向 `develop` 发起 Pull Request。准备发布时，由维护者从本仓库的 `develop` 向 `main` 发起发布 PR。两类 PR 都运行 `docs-build`，发布 PR 还要通过来源检查 `main-source`。合入 `main` 后，发布工作流重新构建站点并部署到 GitHub Pages（仓库 **Settings → Pages → Source** 需选择 **GitHub Actions**）。[站点维护说明](docs/about/maintenance.md)
+VitePress 读取 `docs/` 中的 Markdown 与 [站点配置](docs/.vitepress/config.mts) 生成静态页面；死链和模板错误会让构建失败。向 `main` 发起 Pull Request 会触发 GitHub Actions 的构建检查（`docs-build`）。合并后，发布工作流重新构建站点并部署到 GitHub Pages（仓库 **Settings → Pages → Source** 需选择 **GitHub Actions**）。[站点维护说明](docs/community/maintenance.md)
 
 ## 参与共建
 

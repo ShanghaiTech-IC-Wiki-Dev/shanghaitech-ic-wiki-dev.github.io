@@ -1,6 +1,6 @@
 # 英文方向名（中文名称）
 
-<!-- 复制到 docs/research/，选择与方向对应的英文文件名，并在 docs/.vitepress/data/directions.ts 登记方向，页面中用 FacultyList、CourseTable 组件引用相关教授与课程。替换提示，删去尚无可靠材料的断言。 -->
+<!-- 复制到 docs/explore-ic/research-directions/，选择与方向对应的英文文件名，并在 docs/.vitepress/data/directions.ts 登记方向，页面中用 FacultyList、CourseTable 组件引用相关教授与课程。替换提示，删去尚无可靠材料的断言。 -->
 
 ## 这个方向解决什么问题
 
