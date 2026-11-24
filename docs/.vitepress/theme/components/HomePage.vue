@@ -8,8 +8,7 @@ import TopologyGraph from './TopologyGraph.vue'
 const stats = [
   { n: faculty.length, unit: '位', label: 'IC 相关教授 / 课题组' },
   { n: courses.length, unit: '门', label: 'IC 相关本研课程' },
-  { n: directions.length, unit: '个', label: '细分科研方向' },
-  { n: 'RTL→GDS', unit: '', label: 'Cadence 后端全流程实训' }
+  { n: directions.length, unit: '个', label: '细分科研方向' }
 ]
 
 const entries = [
@@ -44,7 +43,7 @@ const features = [
   },
   {
     tag: '产教融合',
-    title: '上海创芯学院 · 一生一芯',
+    title: '上海创芯学院',
     desc: '上科大、上交、复旦共同参与创建；“一生一芯”是学位授予门槛，从架构设计一路做到流片与硅后验证。',
     link: '/shanghaitech/programs'
   },
@@ -390,7 +389,7 @@ const friends = [
   max-width: var(--max);
   margin: 56px auto 0;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 .stat {
@@ -652,13 +651,6 @@ const friends = [
   .features {
     grid-template-columns: repeat(2, 1fr);
   }
-  .stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .stat:nth-child(3) {
-    border-left: none;
-    padding-left: 8px;
-  }
   .cta-inner {
     flex-direction: column;
     align-items: flex-start;
@@ -670,6 +662,9 @@ const friends = [
   }
   .hero {
     padding-top: 48px;
+  }
+  .stat + .stat {
+    padding-left: 8px;
   }
   .entries,
   .features,
