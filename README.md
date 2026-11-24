@@ -56,7 +56,7 @@ templates/                   新文章模板
 
 ## 构建与发布
 
-VitePress 读取 `docs/` 中的 Markdown 与 [站点配置](docs/.vitepress/config.mts) 生成静态页面；死链和模板错误会让构建失败。向 `main` 发起 Pull Request 会触发 GitHub Actions 的构建检查（`docs-build`）。合并后，发布工作流重新构建站点并部署到 GitHub Pages（仓库 **Settings → Pages → Source** 需选择 **GitHub Actions**）。[站点维护说明](docs/about/maintenance.md)
+VitePress 读取 `docs/` 中的 Markdown 与 [站点配置](docs/.vitepress/config.mts) 生成静态页面；死链和模板错误会让构建失败。从 `develop` 创建功能分支，完成后向 `develop` 发起 Pull Request。准备发布时，由维护者从本仓库的 `develop` 向 `main` 发起发布 PR。两类 PR 都运行 `docs-build`，发布 PR 还要通过来源检查 `main-source`。合入 `main` 后，发布工作流重新构建站点并部署到 GitHub Pages（仓库 **Settings → Pages → Source** 需选择 **GitHub Actions**）。[站点维护说明](docs/about/maintenance.md)
 
 ## 参与共建
 
