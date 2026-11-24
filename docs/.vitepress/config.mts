@@ -168,7 +168,7 @@ const sidebar: DefaultTheme.Sidebar = {
             {
               text: '国内升学',
               items: [
-                { text: '保研 / 推免', link: '/career/baoyan' },
+                { text: '保研', link: '/career/baoyan' },
                 { text: '考研', link: '/career/kaoyan' }
               ]
             },
