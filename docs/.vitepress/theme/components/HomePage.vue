@@ -85,9 +85,9 @@ const friends = [
       <div class="hero-bg" aria-hidden="true" />
       <div class="hero-inner">
         <div class="hero-text">
-          <p class="eyebrow">ShanghaiTech IC Wiki</p>
           <h1>
-            上科大<span class="grad">芯知库</span>
+            <span class="hero-name-en" lang="en">ShanghaiTech <span class="name-suffix">IC Wiki</span></span>
+            <span lang="zh-CN">上科大<span class="grad">芯知库</span></span>
           </h1>
           <p class="lead">
             从电路基础到流片签核——上海科技大学学生发起的集成电路学习、科研与升学指南。
@@ -276,21 +276,23 @@ const friends = [
   gap: 40px;
   align-items: center;
 }
-.eyebrow {
-  margin: 0 0 14px;
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
-  line-height: 1.25;
-  letter-spacing: 0.015em;
-  color: #8fe3ec;
-  font-weight: 600;
-}
 .hero h1 {
+  display: grid;
+  gap: 0.16em;
   margin: 0;
   font-size: clamp(40px, 6vw, 64px);
   line-height: 1.08;
   font-weight: 800;
   letter-spacing: -0.02em;
   color: #fff;
+}
+.hero-name-en {
+  font-size: 0.9em;
+  font-weight: 750;
+  color: #c2f4f7;
+}
+.hero-name-en .name-suffix {
+  white-space: nowrap;
 }
 .hero h1 .grad {
   background: linear-gradient(120deg, #5ff0f2 0%, #9ad7ff 45%, #ff9a8b 100%);
@@ -664,6 +666,9 @@ const friends = [
   }
 }
 @media (max-width: 640px) {
+  .hero h1 {
+    font-size: clamp(32px, 9.6vw, 40px);
+  }
   .hero {
     padding-top: 48px;
   }
