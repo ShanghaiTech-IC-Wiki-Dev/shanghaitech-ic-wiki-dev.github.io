@@ -250,7 +250,7 @@ export default withMermaid(
       outline: { level: [2, 3], label: '本页目录' },
       socialLinks: [{ icon: 'github', link: repo }],
       editLink: {
-        pattern: `${repo}/edit/main/docs/:path`,
+        pattern: `${repo}/edit/develop/docs/:path`,
         text: '在 GitHub 上编辑此页'
       },
       lastUpdated: { text: '最后更新' },

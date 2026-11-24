@@ -14,15 +14,17 @@
 ## 从个人分支开始
 
 1. 在项目仓库右上角选择 **Fork → Create fork**，进入自己的仓库副本。
-2. 在自己的 Fork 选择 **Code → HTTPS**，复制地址，将下例中的 `FORK_URL` 换成实际地址。在已有本地副本时直接进入仓库目录即可。
+2. 在自己的 Fork 选择 **Code → HTTPS**，复制地址并替换下例的 `FORK_URL`。从原项目仓库的 **Code → HTTPS** 复制地址，替换 `UPSTREAM_URL`。已有本地副本时，直接进入仓库目录。已有 `upstream` 时可跳过添加远端的命令。
 
    ```bash
    git clone FORK_URL ic-wiki
    cd ic-wiki
-   git switch -c docs/add-reading-notes
+   git remote add upstream UPSTREAM_URL
+   git fetch upstream develop
+   git switch --no-track -c docs/add-reading-notes upstream/develop
    ```
 
-3. 以后开始新稿件前，在 GitHub 上打开 Fork 的 **Sync fork → Update branch**，再从本地更新过的 `main` 创建新分支。拥有本仓库写入权限的成员也可直接在仓库内创建开发分支。
+3. 每次开始新稿件前，运行 `git fetch upstream develop`，再从更新后的 `upstream/develop` 新建主题分支。直接克隆原项目的核心成员以 `origin/develop` 为起点。
 
 ## 修改或新增页面
 
@@ -66,6 +68,6 @@ git commit -m "docs: 增加论文阅读笔记"
 git push -u origin docs/add-reading-notes
 ```
 
-在 GitHub 上选择 **Compare & pull request**，确认目标是项目仓库的 `main`，来源是你的开发分支。填写 PR 模板，说明资料来源和检查结果。若使用网页编辑、尚未本地构建，可在模板中如实说明，并查看 **Checks** 中的 CI 结果。
+在 GitHub 上选择 **Compare & pull request**，确认目标是项目仓库的 `develop`，来源是你的开发分支。填写 PR 模板，说明资料来源和检查结果。若使用网页编辑、尚未本地构建，可在模板中如实说明，并查看 **Checks** 中的 CI 结果。
 
-维护者核对内容、署名、链接和构建结果后合并。收到修改意见时，在同一分支补充提交即可更新 PR。合并会触发网站部署，随后可在正式网站复查页面。[维护说明](docs/about/maintenance.md)
+维护者核对内容、署名、链接和构建结果后合并。收到修改意见时，在同一分支补充提交即可更新 PR。内容先合并到 `develop`。准备发布时，维护者从本仓库的 `develop` 向 `main` 提交发布 PR，合并后再到正式网站复查。[维护说明](docs/about/maintenance.md)

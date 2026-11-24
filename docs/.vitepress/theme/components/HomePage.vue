@@ -5,8 +5,6 @@ import { courses } from '../../data/courses'
 import { directions } from '../../data/directions'
 import TopologyGraph from './TopologyGraph.vue'
 
-const repoUrl = 'https://github.com/ShanghaiTech-IC-Wiki-Dev/shanghaitech-ic-wiki-dev.github.io'
-
 const stats = [
   { n: faculty.length, unit: '位', label: 'IC 相关教授 / 课题组' },
   { n: courses.length, unit: '门', label: 'IC 相关本研课程' },
@@ -162,16 +160,6 @@ const friends = [
       </div>
     </section>
 
-    <section class="block introduction" aria-labelledby="introduction">
-      <header class="block-head">
-        <h2 id="introduction" lang="en">Introduction</h2>
-      </header>
-      <div class="home-prose">
-        <p>上科大芯知库由上海科技大学 2024 级 IC 荣誉项目学生发起。选课时，我们想知道一门课需要哪些基础。第一次接触科研时，我们想弄清一个方向在研究什么、校内有哪些团队在做。这些问题的答案，常常散落在课程资料、课题组主页和同学之间的交流里。我们希望把它们整理到一个可以查找、核实和持续补充的地方。</p>
-        <p>这座知识库也向同学、校友和其他集成电路爱好者开放。你可以分享一次项目复盘，补上一份帮你弄懂某个概念的资料，或修正一条已经过时的信息。</p>
-      </div>
-    </section>
-
     <!-- Entries -->
     <section class="block">
       <header class="block-head">
@@ -243,7 +231,7 @@ const friends = [
         </div>
         <div class="cta-actions">
           <a class="btn btn--accent" :href="withBase('/about/contribute')">参与共建</a>
-          <a class="btn btn--ghost" :href="repoUrl" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn btn--ghost" href="https://github.com/ShanghaiTech-IC-Wiki-Dev/shanghaitech-ic-wiki-dev.github.io" target="_blank" rel="noopener">GitHub ↗</a>
         </div>
       </div>
       <div class="friends">
@@ -251,17 +239,6 @@ const friends = [
         <a v-for="f in friends" :key="f.name" :href="f.url" target="_blank" rel="noopener">{{ f.name }}</a>
         <a :href="withBase('/links/')">更多 →</a>
       </div>
-    </section>
-
-    <section class="block notices" aria-labelledby="licensing">
-      <header class="block-head">
-        <h2 id="licensing">许可与声明</h2>
-      </header>
-      <ul class="home-prose">
-        <li><strong>项目性质</strong>　本站由上海科技大学 IC 荣誉项目学生独立发起，由贡献者共同维护。文章代表各自作者的观点，本站不代表学校、学院或课题组发布官方信息。</li>
-        <li><strong>开源许可</strong>　网站代码、配置与脚本采用 <a :href="repoUrl + '/blob/main/LICENSE'">MIT License</a>，原创文档采用 <a :href="repoUrl + '/blob/main/LICENSE-CONTENT'">CC BY 4.0</a>。复用原创内容时，请注明作者、出处、许可及所作修改。第三方材料遵循各自的许可。</li>
-        <li><strong>信息时效</strong>　课程安排、培养方案、招生要求及课题组招募信息可能调整，请以学校、院系或课题组最新发布的正式说明为准。</li>
-      </ul>
     </section>
   </div>
 </template>
@@ -463,28 +440,6 @@ const friends = [
 }
 .block-head {
   margin-bottom: 30px;
-}
-.block.introduction {
-  padding-bottom: 0;
-}
-.notices {
-  border-top: 1px solid var(--vp-c-divider);
-}
-.home-prose {
-  font-size: 1rem;
-  line-height: 1.85;
-  color: var(--vp-c-text-1);
-}
-.home-prose > * {
-  max-width: 48rem;
-}
-.home-prose > * + * {
-  margin-top: 1em;
-}
-.home-prose a {
-  color: var(--vp-c-brand-1);
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
 }
 .kicker {
   margin: 0 0 6px;
