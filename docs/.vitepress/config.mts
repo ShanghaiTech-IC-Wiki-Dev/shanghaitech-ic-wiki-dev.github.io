@@ -5,8 +5,9 @@ const repo = 'https://github.com/ShanghaiTech-IC-Wiki-Dev/shanghaitech-ic-wiki-d
 
 const campusSidebar: DefaultTheme.SidebarItem[] = [
   {
-    text: '上科大 IC 生态',
+    text: '上科大IC生态',
     items: [
+      { text: '总览', link: '/shanghaitech/' },
       {
         text: '课程体系',
         link: '/courses/',
@@ -34,7 +35,6 @@ const campusSidebar: DefaultTheme.SidebarItem[] = [
           }
         ]
       },
-      { text: '总览', link: '/shanghaitech/' },
       { text: '教授与课题组', link: '/shanghaitech/faculty' },
       { text: '科研与工艺平台', link: '/shanghaitech/platforms' },
       { text: '特色培养项目', link: '/shanghaitech/programs' }
@@ -233,9 +233,10 @@ export default withMermaid(
         { text: '认识 IC', link: '/explore-ic/', activeMatch: '^/explore-ic/' },
         { text: '学习地图', link: '/map/', activeMatch: '^/map/' },
         {
-          text: '上科大 IC',
+          text: '上科大IC生态',
           activeMatch: '^/(courses|shanghaitech|research)/',
           items: [
+            { text: '总览', link: '/shanghaitech/' },
             { text: '课程体系', link: '/courses/' },
             { text: '教授与课题组', link: '/shanghaitech/faculty' },
             { text: '科研方向拓扑', link: '/research/' },
