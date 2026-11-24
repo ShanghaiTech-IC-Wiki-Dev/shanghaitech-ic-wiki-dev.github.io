@@ -13,11 +13,11 @@ const stats = [
 ]
 
 const entries = [
-  { no: '01', title: '学习地图', desc: '上科大课程承接网络与四条进阶路线：数字、模拟、器件、EDA。', link: '/map/' },
-  { no: '02', title: '上科大课程', desc: '2026-27 官方开课表 + 学长学姐的课程经验与踩坑记录。', link: '/courses/' },
-  { no: '03', title: '教授与课题组', desc: '后摩尔中心、智慧电气、系统与安全中心的 IC 相关课题组。', link: '/shanghaitech/faculty' },
-  { no: '04', title: '科研方向', desc: '11 个细分方向：做什么、谁在做、要先学什么。', link: '/research/' },
-  { no: '05', title: '科普基础篇', desc: '产业链、设计流程、器件工艺、前沿技术与术语表。', link: '/basics/' },
+  { no: '01', title: '认识 IC', desc: '产业链、设计流程、器件工艺、前沿技术与术语表。', link: '/explore-ic/' },
+  { no: '02', title: '学习地图', desc: '上科大课程承接网络与四条进阶路线：数字、模拟、器件、EDA。', link: '/map/' },
+  { no: '03', title: '课程体系', desc: '2026-27 官方开课表 + 学长学姐的课程经验与踩坑记录。', link: '/courses/' },
+  { no: '04', title: '教授与课题组', desc: '后摩尔中心、智慧电气、系统与安全中心的 IC 相关课题组。', link: '/shanghaitech/faculty' },
+  { no: '05', title: '科研方向', desc: '11 个细分方向：做什么、谁在做、要先学什么。', link: '/research/' },
   { no: '06', title: '自学资源 · EDA', desc: '全球公开课、经典教材、商用与开源 EDA 工具链。', link: '/self-learning/' },
   { no: '07', title: '科研探索', desc: '进组、读论文、会议地图、科研工具与学术写作。', link: '/research-guide/' },
   { no: '08', title: '升学 · 就业 · 竞赛', desc: '保研、出国、考研、实习求职，以及集创赛与一生一芯。', link: '/career/' }

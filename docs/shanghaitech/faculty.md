@@ -58,7 +58,7 @@ description: 按器件与工艺、电路设计、系统与架构、设计方法�
 
 ### 数字 VLSI 与专用芯片
 
-数字超大规模集成电路（Very Large Scale Integration，VLSI）研究连接算法、硬件架构、RTL 和物理实现，可进一步面向视觉、图形与可重构计算。方向导读：[数字 VLSI 与专用芯片](/research/digital-vlsi)；完整课题组介绍示例见 [VSPLab](/shanghaitech/vsplab)。
+数字超大规模集成电路（Very Large Scale Integration，VLSI）研究连接算法、硬件架构、RTL 和物理实现，可进一步面向视觉、图形与可重构计算。方向导读：[数字 VLSI 与专用芯片](/research/digital-vlsi)。
 
 <FacultyList dir="digital" primary />
 

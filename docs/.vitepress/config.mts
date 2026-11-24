@@ -3,6 +3,78 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 
 const repo = 'https://github.com/ShanghaiTech-IC-Wiki-Dev/shanghaitech-ic-wiki-dev.github.io'
 
+const campusSidebar: DefaultTheme.SidebarItem[] = [
+  {
+    text: '上科大 IC 生态',
+    items: [
+      {
+        text: '课程体系',
+        link: '/courses/',
+        collapsed: true,
+        items: [
+          {
+            text: '专业基础',
+            items: [
+              { text: 'SI100B 信息科学技术导论', link: '/courses/si100b' },
+              { text: 'EE115A 模拟电路', link: '/courses/ee115a' },
+              { text: 'EE115B 数字电路', link: '/courses/ee115b' },
+              { text: 'EE150 / EE150L 信号与系统', link: '/courses/ee150' },
+              { text: 'CS110 计算机体系结构 I', link: '/courses/cs110' }
+            ]
+          },
+          {
+            text: '芯片设计进阶',
+            items: [
+              { text: 'EE113 / EE113L 数字集成电路 I', link: '/courses/ee113' },
+              { text: 'EE291F 数字 VLSI 设计流程', link: '/courses/ee291f' },
+              { text: 'EE219 智能计算系统', link: '/courses/ee219' },
+              { text: 'CS290U 深度学习工程实践', link: '/courses/cs290u' },
+              { text: 'Cadence 集成电路暑期实训', link: '/courses/cadence-summer' }
+            ]
+          }
+        ]
+      },
+      { text: '总览', link: '/shanghaitech/' },
+      { text: '教授与课题组', link: '/shanghaitech/faculty' },
+      { text: '科研与工艺平台', link: '/shanghaitech/platforms' },
+      { text: '特色培养项目', link: '/shanghaitech/programs' }
+    ]
+  }
+]
+
+const researchOverview = { text: '方向巡礼与拓扑', link: '/research/' }
+const researchTopics: DefaultTheme.SidebarItem[] = [
+  {
+    text: '器件与工艺',
+    items: [
+      { text: '半导体器件与新型存储', link: '/research/devices' },
+      { text: '光电子与集成光子', link: '/research/photonics' },
+      { text: 'MEMS、传感与柔性电子', link: '/research/mems-sensors' }
+    ]
+  },
+  {
+    text: '电路设计',
+    items: [
+      { text: '数字 VLSI 与专用芯片', link: '/research/digital-vlsi' },
+      { text: '模拟/混合信号与医疗芯片', link: '/research/analog-mixed' },
+      { text: '电源管理与功率电子', link: '/research/power' },
+      { text: '射频、微波与电磁', link: '/research/rf-em' }
+    ]
+  },
+  {
+    text: '系统与架构',
+    items: [
+      { text: 'AI 芯片与新型计算', link: '/research/ai-hardware' },
+      { text: '计算机体系结构与系统', link: '/research/architecture' },
+      { text: '硬件安全与隐私计算', link: '/research/hardware-security' }
+    ]
+  },
+  {
+    text: '设计方法学',
+    items: [{ text: 'EDA 与可制造性设计', link: '/research/eda' }]
+  }
+]
+
 const sidebar: DefaultTheme.Sidebar = {
   '/about/': [
     {
@@ -16,17 +88,21 @@ const sidebar: DefaultTheme.Sidebar = {
       ]
     }
   ],
-  '/basics/': [
+  '/explore-ic/': [
     {
-      text: '科普基础篇',
+      text: '认识 IC',
       items: [
-        { text: '集成电路是什么', link: '/basics/' },
-        { text: '产业链与公司版图', link: '/basics/industry-chain' },
-        { text: '芯片设计全流程', link: '/basics/design-flow' },
-        { text: '器件与工艺入门', link: '/basics/devices-process' },
-        { text: '前沿技术速览', link: '/basics/frontier' },
-        { text: '常用术语表', link: '/basics/glossary' }
+        { text: '总览', link: '/explore-ic/' },
+        { text: 'IC 知识地图：设计全流程', link: '/explore-ic/knowledge-map' },
+        { text: '产业链与公司版图', link: '/explore-ic/industry-chain' },
+        { text: '器件与工艺入门', link: '/explore-ic/devices-process' },
+        { text: '前沿技术速览', link: '/explore-ic/frontier' },
+        { text: '常用术语表', link: '/explore-ic/glossary' }
       ]
+    },
+    {
+      text: '科研方向',
+      items: [researchOverview, ...researchTopics.map(topic => ({ ...topic, collapsed: true }))]
     }
   ],
   '/map/': [
@@ -41,78 +117,11 @@ const sidebar: DefaultTheme.Sidebar = {
       ]
     }
   ],
-  '/courses/': [
-    {
-      text: '上科大课程',
-      items: [{ text: '课程总览', link: '/courses/' }]
-    },
-    {
-      text: '专业基础',
-      items: [
-        { text: 'SI100B 信息科学技术导论', link: '/courses/si100b' },
-        { text: 'EE115A 模拟电路', link: '/courses/ee115a' },
-        { text: 'EE115B 数字电路', link: '/courses/ee115b' },
-        { text: 'EE150 / EE150L 信号与系统', link: '/courses/ee150' },
-        { text: 'CS110 计算机体系结构 I', link: '/courses/cs110' }
-      ]
-    },
-    {
-      text: '芯片设计进阶',
-      items: [
-        { text: 'EE113 / EE113L 数字集成电路 I', link: '/courses/ee113' },
-        { text: 'EE291F 数字 VLSI 设计流程', link: '/courses/ee291f' },
-        { text: 'EE219 智能计算系统', link: '/courses/ee219' },
-        { text: 'CS290U 深度学习工程实践', link: '/courses/cs290u' },
-        { text: 'Cadence 集成电路暑期实训', link: '/courses/cadence-summer' }
-      ]
-    }
-  ],
-  '/shanghaitech/': [
-    {
-      text: '上科大 IC 生态',
-      items: [
-        { text: '总览', link: '/shanghaitech/' },
-        { text: '教授与课题组', link: '/shanghaitech/faculty' },
-        { text: '课题组介绍：VSPLab', link: '/shanghaitech/vsplab' },
-        { text: '科研与工艺平台', link: '/shanghaitech/platforms' },
-        { text: '特色培养项目', link: '/shanghaitech/programs' }
-      ]
-    }
-  ],
+  '/courses/': campusSidebar,
+  '/shanghaitech/': campusSidebar,
   '/research/': [
-    {
-      text: '科研方向',
-      items: [{ text: '方向巡礼与拓扑', link: '/research/' }]
-    },
-    {
-      text: '器件与工艺',
-      items: [
-        { text: '半导体器件与新型存储', link: '/research/devices' },
-        { text: '光电子与集成光子', link: '/research/photonics' },
-        { text: 'MEMS、传感与柔性电子', link: '/research/mems-sensors' }
-      ]
-    },
-    {
-      text: '电路设计',
-      items: [
-        { text: '数字 VLSI 与专用芯片', link: '/research/digital-vlsi' },
-        { text: '模拟/混合信号与医疗芯片', link: '/research/analog-mixed' },
-        { text: '电源管理与功率电子', link: '/research/power' },
-        { text: '射频、微波与电磁', link: '/research/rf-em' }
-      ]
-    },
-    {
-      text: '系统与架构',
-      items: [
-        { text: 'AI 芯片与新型计算', link: '/research/ai-hardware' },
-        { text: '计算机体系结构与系统', link: '/research/architecture' },
-        { text: '硬件安全与隐私计算', link: '/research/hardware-security' }
-      ]
-    },
-    {
-      text: '设计方法学',
-      items: [{ text: 'EDA 与可制造性设计', link: '/research/eda' }]
-    }
+    { text: '科研方向', items: [researchOverview] },
+    ...researchTopics
   ],
   '/self-learning/': [
     {
@@ -205,12 +214,13 @@ export default withMermaid(
       logo: '/favicon.svg',
       siteTitle: '上科大芯知库',
       nav: [
+        { text: '认识 IC', link: '/explore-ic/', activeMatch: '^/explore-ic/' },
         { text: '学习地图', link: '/map/', activeMatch: '^/map/' },
-        { text: '上科大课程', link: '/courses/', activeMatch: '^/courses/' },
         {
           text: '上科大 IC',
-          activeMatch: '^/(shanghaitech|research)/',
+          activeMatch: '^/(courses|shanghaitech|research)/',
           items: [
+            { text: '课程体系', link: '/courses/' },
             { text: '教授与课题组', link: '/shanghaitech/faculty' },
             { text: '科研方向拓扑', link: '/research/' },
             { text: '科研与工艺平台', link: '/shanghaitech/platforms' },
@@ -219,9 +229,8 @@ export default withMermaid(
         },
         {
           text: '学习资源',
-          activeMatch: '^/(basics|self-learning|eda)/',
+          activeMatch: '^/(self-learning|eda)/',
           items: [
-            { text: '科普基础篇', link: '/basics/' },
             { text: '自学资源', link: '/self-learning/' },
             { text: 'EDA 工具', link: '/eda/' }
           ]

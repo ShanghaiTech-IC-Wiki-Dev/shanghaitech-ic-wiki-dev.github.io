@@ -10,10 +10,9 @@
 
 | 板块 | 可以在这里找什么 |
 | --- | --- |
-| [科普基础](docs/basics/index.md) | 集成电路是什么、产业链、设计流程、器件与工艺、术语表 |
+| [认识 IC](docs/explore-ic/index.md) | 集成电路是什么、产业链、设计流程、器件与工艺、术语表 |
 | [学习地图](docs/map/index.md) | 上科大课程承接网络与数字、模拟、器件、EDA 四条路线 |
-| [上科大课程](docs/courses/index.md) | 2026-27 开课表、培养方案要求与核心课程详情 |
-| [上科大 IC 生态](docs/shanghaitech/index.md) | 教授与课题组、VSPLab、科研与工艺平台、培养项目 |
+| [上科大 IC](docs/shanghaitech/index.md) | [课程体系](docs/courses/index.md)（2026-27 开课表、培养方案与核心课程）、教授与课题组、科研与工艺平台、培养项目 |
 | [科研方向](docs/research/index.md) | 11 个细分方向的问题、方法、本校研究力量与先修知识 |
 | [自学资源](docs/self-learning/index.md) · [EDA 工具](docs/eda/index.md) | 公开课程、教材、商用与开源工具链 |
 | [科研探索](docs/research-guide/index.md) | 进组、读论文、会议期刊、工具与写作 |
@@ -39,7 +38,7 @@ npm run preview   # 预览构建产物
 ```
 docs/
 ├── index.md                 首页（HomePage 组件）
-├── basics/  map/  courses/  shanghaitech/  research/
+├── explore-ic/  map/  courses/  shanghaitech/  research/
 ├── self-learning/  eda/  research-guide/  career/  competitions/  links/  about/
 └── .vitepress/
     ├── config.mts           导航栏、侧边栏与站点配置

@@ -60,7 +60,7 @@ graph TD
 ## 入门资源
 
 - [器件自学路线](/self-learning/device) 与 [器件学习地图](/map/device)：安排物理、器件模型和工艺知识。
-- [器件与工艺基础](/basics/devices-process)：先掌握常用工艺与术语。
+- [器件与工艺基础](/explore-ic/devices-process)：先掌握常用工艺与术语。
 - [nanoHUB](https://nanohub.org/)：器件教学、模型与仿真资源。
 - [IEEE Electron Devices Society](https://eds.ieee.org/)：查找器件领域会议、期刊与教育活动。
 

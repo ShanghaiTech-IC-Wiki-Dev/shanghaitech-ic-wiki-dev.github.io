@@ -56,7 +56,7 @@ flowchart TD
 - [Cadence 官方网站](https://www.cadence.com/)：了解工具职责与官方学习入口，访问培训资源可能需要授权。
 - [商业 EDA](/eda/commercial)：对照综合、实现与签核工具。
 - [EDA 环境](/eda/environment)：准备 Linux、脚本与可重复运行环境。
-- [设计流程](/basics/design-flow)：先理解流程角色，再读工具命令，避免按安装目录随机学习。
+- [设计流程](/explore-ic/knowledge-map)：先理解流程角色，再读工具命令，避免按安装目录随机学习。
 
 ## 往届经验与建议
 
