@@ -57,23 +57,7 @@ flowchart LR
 
 完整方向与交叉关系见 [科研方向](/research/)，按方向查老师见 [教授与课题组](/shanghaitech/faculty)。
 
-## EE 本科：143 学分如何连接 IC
-
-以下依据 **2026 级电子信息工程本科培养方案**；其他年级应使用本年级版本。方案要求修满至少 **143 学分**，其中人文社科通识 53 学分、自然科学通识 30 学分、专业课程 51 学分、任选课程 9 学分。
-
-专业课程由 **32 学分必修 + 19 学分选修**组成。必修部分包含计算机编程、电路基础及实验、电磁学及课程设计、信号与系统及实验、模拟电路、数字电路，以及毕业论文。这里的基础不只服务于 IC：信号、器件、电磁和编程能力，也为通信、控制、光电与电力电子保留后续选择。
-
-### 专业限选：三选二，不是任选其一
-
-19 学分本学科选修中包含 **8 学分专业限选**，要求从以下三门各 4 学分课程中**至少选两门**：
-
-- **EE120 半导体器件基础**：进一步连接器件、工艺与晶体管工作机制。
-- **EE140 通信原理**：连接信号处理与通信系统。
-- **EE160 控制原理**：连接动态系统、反馈与控制。
-
-如果三门都修，多余学分计入本学科选修的 19 学分中。不要因为当前偏向数字 IC，就在未核对方案前跳过专业限选要求。
-
-### 面向 IC 的选课思路
+## 面向 IC 的选课思路
 
 - **数字电路与芯片实现**：从 [EE115B 数字电路](/courses/ee115b) 到 [EE113 数字集成电路 I](/courses/ee113)，再接 [EE291F 数字 VLSI 设计流程](/courses/ee291f)。
 - **模拟与混合信号**：先打好电路基础、[EE115A 模拟电路](/courses/ee115a) 和 [信号与系统](/courses/ee150)，再进入模拟集成电路与相关实验。
@@ -104,7 +88,7 @@ flowchart LR
 - [上海科技大学本科生培养方案](https://oaa.shanghaitech.edu.cn/pyfa_4226/list.htm)：教务处入口，按入学年级和专业选择培养方案，同一栏目提供“课表信息”和“课程信息”入口，2026-11-24 核验。
 - [走进信息学院七大研究中心，2026-05-06](https://sist.shanghaitech.edu.cn/2026/0506/c10969a1121576/page.htm)。
 - [信息学院本科生招生介绍](https://sist.shanghaitech.edu.cn/2711/list.htm)：专业设置、培养特色与本硕博一体化体系。
-- [2026 级电子信息工程培养方案](https://faculty.sist.shanghaitech.edu.cn/office/Academics/Undergraduate/Degree%20Programmes/2026%20Bachelor%20Degree%20Prorgams%20in%20EE.htm)：学分及三选二规则；本文依据其本地摘录 `ee2026_rows.txt` 整理。
+- [2026 级电子信息工程培养方案](https://faculty.sist.shanghaitech.edu.cn/office/Academics/Undergraduate/Degree%20Programmes/2026%20Bachelor%20Degree%20Prorgams%20in%20EE.htm)。
 - [本硕博课程体系与年度开课计划](https://sist.shanghaitech.edu.cn/2835/list.htm)、[2026–2027 学年开课表](https://faculty.sist.shanghaitech.edu.cn/office/Academics/Courses/SIST_2026-2027_Courses.htm)：先修与课程层次，以教务系统为准。
 - 课题组示意使用本站 `faculty.ts`、`directions.ts` 的 2026-11 资料版本；具体主页见 [教授与课题组](/shanghaitech/faculty)。
 - [本科生 EE 专业选修课分类图](https://faculty.sist.shanghaitech.edu.cn/office/Academics/Undergraduate/Course%20schedule/EE_sample_core_electives.htm)：本科选课指导中包含半导体器件物理、导波光学等高阶课程，并要求关注先修、教学大纲与学分归类；课程层次参照当年开课表。

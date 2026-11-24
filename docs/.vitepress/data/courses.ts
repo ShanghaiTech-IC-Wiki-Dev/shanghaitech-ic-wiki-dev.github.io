@@ -8,7 +8,7 @@ export interface Course {
   name: string
   en: string
   level: '本科' | '研究生'
-  type: '必修' | '三选二' | '选修'
+  type: '必修' | '选修'
   credit: string
   semester: string
   instructors: string
@@ -46,7 +46,7 @@ export const courses: Course[] = [
   { code: "EE115B", name: "数字电路", en: "Digital Circuits", level: "本科", type: "必修", credit: "3", semester: "秋/春", instructors: "杨恒昭、李娟、肖晨曦", prereq: "EE111", areas: ["basic", "digital"], page: "/courses/ee115b" },
   { code: "EE130", name: "电磁学", en: "Electromagnetics", level: "本科", type: "必修", credit: "4", semester: "秋/春", instructors: "王雄、林丰涵", prereq: "Mathematical Analysis II", areas: ["basic", "rf"] },
   { code: "EE130P", name: "电磁学课程设计", en: "Electromagnetics Project", level: "本科", type: "必修", credit: "2", semester: "秋/春", instructors: "王雄、李娟、林丰涵", prereq: "Mathematical Analysis II", areas: ["basic", "rf"] },
-  { code: "EE120", name: "半导体器件基础", en: "Fundamentals of Semiconductor Devices", level: "本科", type: "三选二", credit: "4", semester: "春/秋", instructors: "杨雨梦、陈佰乐", prereq: "Physics II, or EE130", areas: ["device"] },
+  { code: "EE120", name: "半导体器件基础", en: "Fundamentals of Semiconductor Devices", level: "本科", type: "选修", credit: "4", semester: "春/秋", instructors: "杨雨梦、陈佰乐", prereq: "Physics II, or EE130", areas: ["device"] },
   { code: "CS121", name: "并行计算", en: "Parallel Computing", level: "本科", type: "选修", credit: "4", semester: "秋", instructors: "范睿", prereq: "CS100,CS101(recommended)", areas: ["arch"] },
   { code: "CS130", name: "操作系统I", en: "Operating Systems I", level: "本科", type: "选修", credit: "4", semester: "秋/春", instructors: "殷树、何静竹", prereq: "CS100,CS101,CS110", areas: ["arch"] },
   { code: "CS131", name: "编译原理", en: "Compilers", level: "本科", type: "选修", credit: "4", semester: "秋", instructors: "陈浩贤", prereq: "CS100", areas: ["arch"] },
