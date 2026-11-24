@@ -19,43 +19,61 @@ const expanded = ref(false)
 const root = ref<HTMLElement>()
 const toggle = ref<HTMLButtonElement>()
 const menuId = useId()
+let hoverTimer: ReturnType<typeof setTimeout> | undefined
+
+function setExpanded(open: boolean) {
+  clearTimeout(hoverTimer)
+  expanded.value = open
+}
+
+function onPointerEnter(event: PointerEvent) {
+  if (props.screenMenu || event.pointerType !== 'mouse') return
+  // 给直接点箭头的操作留出时间，避免一次点击先展开再收起。
+  hoverTimer = setTimeout(() => { expanded.value = true }, 100)
+}
+
+function onPointerLeave(event: PointerEvent) {
+  if (!props.screenMenu && event.pointerType === 'mouse') setExpanded(false)
+}
 
 function closeFromOutside(event: Event) {
-  if (expanded.value && !root.value?.contains(event.target as Node)) expanded.value = false
+  if (!root.value?.contains(event.target as Node)) setExpanded(false)
 }
 
 function closeOnEscape(event: KeyboardEvent) {
   if (!expanded.value) return
   event.stopPropagation()
-  expanded.value = false
+  setExpanded(false)
   toggle.value?.focus()
 }
 
 function followLink() {
-  expanded.value = false
+  setExpanded(false)
   if (props.screenMenu) closeScreen?.()
 }
 
-watch(() => route.path, () => { expanded.value = false })
+watch(() => route.path, () => setExpanded(false))
 onMounted(() => {
   document.addEventListener('pointerdown', closeFromOutside)
   document.addEventListener('focusin', closeFromOutside)
 })
 onUnmounted(() => {
+  clearTimeout(hoverTimer)
   document.removeEventListener('pointerdown', closeFromOutside)
   document.removeEventListener('focusin', closeFromOutside)
 })
 </script>
 
 <template>
-  <div ref="root" class="section-nav" :class="{ mobile: screenMenu }" @keydown.esc="closeOnEscape">
+  <div ref="root" class="section-nav" :class="{ mobile: screenMenu }"
+    @pointerenter="onPointerEnter" @pointerleave="onPointerLeave" @keydown.esc="closeOnEscape">
     <div class="section-row">
       <VPLink class="section-title" :class="{ active }" :href="link"
         :aria-current="route.path === withBase(link) ? 'page' : undefined" @click="followLink">
         {{ text }}
       </VPLink>
       <button ref="toggle" type="button" class="section-toggle" :aria-controls="menuId"
-        :aria-expanded="expanded" :aria-label="text + '子菜单'" @click="expanded = !expanded">
+        :aria-expanded="expanded" :aria-label="text + '子菜单'" @click="setExpanded(!expanded)">
         <span class="vpi-chevron-down" aria-hidden="true" />
       </button>
     </div>
