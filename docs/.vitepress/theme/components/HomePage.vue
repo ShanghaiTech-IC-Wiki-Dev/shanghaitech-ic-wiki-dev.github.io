@@ -341,6 +341,10 @@ const friends = [
   background: linear-gradient(135deg, #ec725e, #b33255);
   color: #fff;
 }
+.btn--primary:is(:hover, :focus-visible),
+.btn--accent:is(:hover, :focus-visible) {
+  background: linear-gradient(135deg, #be4948, #902541);
+}
 .hero-art svg {
   width: 100%;
   max-width: 380px;
@@ -503,6 +507,9 @@ const friends = [
   font-size: 18px;
   font-weight: 700;
   color: var(--vp-c-text-1);
+}
+:is(.entry, .feature, .track):is(:hover, :focus-visible) h3 {
+  color: var(--vp-c-brand-1);
 }
 .entry p,
 .feature p {

@@ -1,6 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import { inBrowser, type Theme } from 'vitepress'
 import HomePage from './components/HomePage.vue'
+import NavSection from './components/NavSection.vue'
 import TopologyGraph from './components/TopologyGraph.vue'
 import FacultyList from './components/FacultyList.vue'
 import CourseTable from './components/CourseTable.vue'
@@ -26,6 +27,7 @@ if (inBrowser) {
 export default {
   extends: DefaultTheme,
   enhanceApp({ app }) {
+    app.component('NavSection', NavSection)
     app.component('HomePage', HomePage)
     app.component('TopologyGraph', TopologyGraph)
     app.component('FacultyList', FacultyList)

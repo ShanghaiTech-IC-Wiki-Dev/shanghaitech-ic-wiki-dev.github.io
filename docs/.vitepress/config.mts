@@ -6,8 +6,8 @@ const repo = 'https://github.com/ShanghaiTech-IC-Wiki-Dev/shanghaitech-ic-wiki-d
 const campusSidebar: DefaultTheme.SidebarItem[] = [
   {
     text: '上科大IC生态',
+    link: '/shanghaitech/',
     items: [
-      { text: '总览', link: '/shanghaitech/' },
       {
         text: '课程体系',
         link: '/courses/',
@@ -42,7 +42,6 @@ const campusSidebar: DefaultTheme.SidebarItem[] = [
   }
 ]
 
-const researchOverview = { text: '方向巡礼与拓扑', link: '/research/' }
 const researchTopics: DefaultTheme.SidebarItem[] = [
   {
     text: '器件与工艺',
@@ -79,8 +78,8 @@ const sidebar: DefaultTheme.Sidebar = {
   '/about/': [
     {
       text: '社区与共建',
+      link: '/about/',
       items: [
-        { text: '关于本站', link: '/about/' },
         { text: '参与共建', link: '/about/contribute' },
         { text: '文章写作示例', link: '/about/writing' },
         { text: '贡献者与署名', link: '/about/contributors' },
@@ -91,8 +90,8 @@ const sidebar: DefaultTheme.Sidebar = {
   '/explore-ic/': [
     {
       text: '认识 IC',
+      link: '/explore-ic/',
       items: [
-        { text: '总览', link: '/explore-ic/' },
         { text: 'IC 知识地图：设计全流程', link: '/explore-ic/knowledge-map' },
         { text: '产业链与公司版图', link: '/explore-ic/industry-chain' },
         { text: '器件与工艺入门', link: '/explore-ic/devices-process' },
@@ -104,8 +103,8 @@ const sidebar: DefaultTheme.Sidebar = {
   '/map/': [
     {
       text: '学习地图',
+      link: '/map/',
       items: [
-        { text: '总览：上科大课程网络', link: '/map/' },
         { text: '数字 IC 与体系结构', link: '/map/digital' },
         { text: '模拟 / 射频 / 电源', link: '/map/analog' },
         { text: '器件、工艺与光电', link: '/map/device' },
@@ -116,14 +115,13 @@ const sidebar: DefaultTheme.Sidebar = {
   '/courses/': campusSidebar,
   '/shanghaitech/': campusSidebar,
   '/research/': [
-    { text: '科研方向', items: [researchOverview] },
-    ...researchTopics
+    { text: '科研方向', link: '/research/', items: researchTopics }
   ],
   '/self-learning/': [
     {
       text: '自学资源',
+      link: '/self-learning/',
       items: [
-        { text: '如何使用本栏目', link: '/self-learning/' },
         { text: '数学、编程与工具基础', link: '/self-learning/foundations' },
         { text: '数字电路与 HDL', link: '/self-learning/digital' },
         { text: '计算机体系结构', link: '/self-learning/architecture' },
@@ -137,8 +135,8 @@ const sidebar: DefaultTheme.Sidebar = {
   '/eda/': [
     {
       text: 'EDA 工具',
+      link: '/eda/',
       items: [
-        { text: '工具全景', link: '/eda/' },
         { text: '商用工具链对照', link: '/eda/commercial' },
         { text: '开源工具链', link: '/eda/open-source' },
         { text: '上科大 EDA 环境与 Linux', link: '/eda/environment' }
@@ -148,8 +146,8 @@ const sidebar: DefaultTheme.Sidebar = {
   '/research-guide/': [
     {
       text: '科研探索',
+      link: '/research-guide/',
       items: [
-        { text: '本科生科研入门', link: '/research-guide/' },
         { text: '论文阅读方法', link: '/research-guide/paper-reading' },
         { text: '会议与期刊地图', link: '/research-guide/venues' },
         { text: '科研工具', link: '/research-guide/tools' },
@@ -160,8 +158,8 @@ const sidebar: DefaultTheme.Sidebar = {
   '/career/': [
     {
       text: '升学与就业',
+      link: '/career/',
       items: [
-        { text: '去向总览', link: '/career/' },
         {
           text: '升学',
           items: [
@@ -194,8 +192,8 @@ const sidebar: DefaultTheme.Sidebar = {
   '/competitions/': [
     {
       text: '竞赛与项目',
+      link: '/competitions/',
       items: [
-        { text: '竞赛总览', link: '/competitions/' },
         { text: '一生一芯', link: '/competitions/ysyx' }
       ]
     }
@@ -203,7 +201,7 @@ const sidebar: DefaultTheme.Sidebar = {
   '/links/': [
     {
       text: '友链',
-      items: [{ text: '开源社区与友站', link: '/links/' }]
+      link: '/links/'
     }
   ]
 }
@@ -233,16 +231,19 @@ export default withMermaid(
         { text: '认识 IC', link: '/explore-ic/', activeMatch: '^/explore-ic/' },
         { text: '学习地图', link: '/map/', activeMatch: '^/map/' },
         {
-          text: '上科大IC生态',
-          activeMatch: '^/(courses|shanghaitech|research)/',
-          items: [
-            { text: '总览', link: '/shanghaitech/' },
-            { text: '课程体系', link: '/courses/' },
-            { text: '教授与课题组', link: '/shanghaitech/faculty' },
-            { text: '科研方向拓扑', link: '/research/' },
-            { text: '科研与工艺平台', link: '/shanghaitech/platforms' },
-            { text: '特色培养项目', link: '/shanghaitech/programs' }
-          ]
+          component: 'NavSection',
+          props: {
+            text: '上科大IC生态',
+            link: '/shanghaitech/',
+            activeRoots: ['shanghaitech', 'research', 'courses'],
+            items: [
+              { text: '课程体系', link: '/courses/' },
+              { text: '教授与课题组', link: '/shanghaitech/faculty' },
+              { text: '科研方向拓扑', link: '/research/' },
+              { text: '科研与工艺平台', link: '/shanghaitech/platforms' },
+              { text: '特色培养项目', link: '/shanghaitech/programs' }
+            ]
+          }
         },
         {
           text: '学习资源',
@@ -262,14 +263,17 @@ export default withMermaid(
           ]
         },
         {
-          text: '社区',
-          activeMatch: '^/(about|links)/',
-          items: [
-            { text: '关于本站', link: '/about/' },
-            { text: '参与共建', link: '/about/contribute' },
-            { text: '站点维护', link: '/about/maintenance' },
-            { text: '友链', link: '/links/' }
-          ]
+          component: 'NavSection',
+          props: {
+            text: '社区',
+            link: '/about/',
+            activeRoots: ['about', 'links'],
+            items: [
+              { text: '参与共建', link: '/about/contribute' },
+              { text: '站点维护', link: '/about/maintenance' },
+              { text: '友链', link: '/links/' }
+            ]
+          }
         }
       ],
       sidebar,
