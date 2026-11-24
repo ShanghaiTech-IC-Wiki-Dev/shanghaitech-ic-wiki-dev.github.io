@@ -181,7 +181,6 @@ const friends = [
       <header class="block-head">
         <p class="kicker">Why ShanghaiTech</p>
         <h2>上科大特色</h2>
-        <p class="sub">网上搜得到的通用知识我们写精炼；只有上科大才有的课程、课题组和平台，我们写详细。</p>
       </header>
       <div class="features">
         <a v-for="f in features" :key="f.title" class="feature" :href="withBase(f.link)">
