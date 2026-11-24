@@ -19,9 +19,9 @@ jobs:
     steps:
       - name: Require the repository's develop branch
         env:
-          VALID_SOURCE: ${{ github.event.pull_request.head.repo.id == github.event.repository.id && github.head_ref == 'develop' }}
+          SAME_REPO: ${{ github.event.pull_request.head.repo.id == github.event.repository.id }}
         run: |
-          if [ "$VALID_SOURCE" != "true" ]; then
+          if [ "$SAME_REPO" != "true" ] || [ "$GITHUB_HEAD_REF" != "develop" ]; then
             echo "::error::请将功能分支的 PR 提交到 develop。只有本仓库的 develop 可以合入 main。"
             exit 1
           fi
