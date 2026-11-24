@@ -99,10 +99,6 @@ const sidebar: DefaultTheme.Sidebar = {
         { text: '前沿技术速览', link: '/explore-ic/frontier' },
         { text: '常用术语表', link: '/explore-ic/glossary' }
       ]
-    },
-    {
-      text: '科研方向',
-      items: [researchOverview, ...researchTopics.map(topic => ({ ...topic, collapsed: true }))]
     }
   ],
   '/map/': [
@@ -166,12 +162,32 @@ const sidebar: DefaultTheme.Sidebar = {
       text: '升学与就业',
       items: [
         { text: '去向总览', link: '/career/' },
-        { text: '保研 / 推免', link: '/career/baoyan' },
-        { text: '出国申请', link: '/career/abroad' },
-        { text: '考研', link: '/career/kaoyan' },
-        { text: '实习指南', link: '/career/internship' },
-        { text: '就业：岗位与面试', link: '/career/jobs' },
-        { text: '上海 IC 企业地图', link: '/career/companies' }
+        {
+          text: '升学',
+          items: [
+            {
+              text: '国内升学',
+              items: [
+                { text: '保研 / 推免', link: '/career/baoyan' },
+                { text: '考研', link: '/career/kaoyan' }
+              ]
+            },
+            { text: '国外升学', link: '/career/abroad' }
+          ]
+        },
+        {
+          text: '职业',
+          items: [
+            { text: '实习', link: '/career/internship' },
+            {
+              text: '就业',
+              items: [
+                { text: '岗位与面试', link: '/career/jobs' },
+                { text: '上海 IC 企业地图', link: '/career/companies' }
+              ]
+            }
+          ]
+        }
       ]
     }
   ],
