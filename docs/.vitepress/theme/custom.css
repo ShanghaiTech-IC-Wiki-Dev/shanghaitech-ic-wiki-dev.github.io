@@ -76,6 +76,45 @@
   letter-spacing: 0.01em;
 }
 
+@media (min-width: 768px) {
+  .VPNavBar .VPNavBarSearch {
+    container: nav-search / inline-size;
+    justify-content: flex-end;
+    min-width: 24px;
+    padding-left: 0;
+  }
+
+  .VPNavBarSearch #local-search {
+    flex: 0 1 14.125rem;
+    flex-basis: calc-size(max-content, size * 1.7);
+  }
+
+  .VPNavBarSearch .DocSearch-Button {
+    justify-content: space-between;
+  }
+}
+
+/* 顶栏放不下搜索文字和快捷键时，使用紧凑的搜索图标。 */
+@container nav-search (max-width: 8.5rem) {
+  #local-search {
+    max-width: 40px;
+  }
+
+  .VPNavBarSearch .DocSearch-Button {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .VPNavBarSearch .DocSearch-Search-Icon {
+    margin: 0;
+  }
+
+  .VPNavBarSearch .DocSearch-Button-Placeholder,
+  .VPNavBarSearch .DocSearch-Button-Keys {
+    display: none;
+  }
+}
+
 /* 正文 */
 .vp-doc h1 {
   letter-spacing: -0.01em;
