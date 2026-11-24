@@ -75,8 +75,6 @@ onUnmounted(() => {
 .section-toggle { display: grid; place-items: center; min-width: 28px; height: 40px; }
 .section-toggle[aria-expanded="true"] span { transform: rotate(180deg); }
 .section-title.active, .section-menu [aria-current="page"] { color: var(--vp-c-brand-1); }
-.section-title:is(:hover, :focus-visible), .section-toggle:is(:hover, :focus-visible),
-.section-menu a:is(:hover, :focus-visible) { color: var(--vp-c-brand-2); background-color: var(--vp-c-brand-soft); }
 
 .section-menu {
   position: absolute;
